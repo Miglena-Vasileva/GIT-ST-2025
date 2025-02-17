@@ -11,7 +11,7 @@
     position: relative;
   }
   
-  .snowfall {
+  #snowfall {
     position: absolute;
     top: 0;
     left: 0;
@@ -22,102 +22,18 @@
   
   .snowflake {
     position: absolute;
-    top: -10px;
     background-color: white;
     border-radius: 50%;
     opacity: 0.8;
-    animation: fall 10s linear infinite;
+    animation: fall linear infinite;
   }
   
   @keyframes fall {
     0% {
-      transform: translateY(0) translateX(0);
+      transform: translateY(-10px);
     }
     100% {
-      transform: translateY(100vh) translateX(calc(50vw - 50%));
+      transform: translateY(100vh);
     }
   }
-  
-  /* Генериране на различни размери и скорости на снежинките */
-  .snowflake:nth-child(1) {
-    width: 5px;
-    height: 5px;
-    animation-duration: 8s;
-    left: 10%;
-    animation-delay: 0s;
-  }
-  
-  .snowflake:nth-child(2) {
-    width: 8px;
-    height: 8px;
-    animation-duration: 10s;
-    left: 20%;
-    animation-delay: 1s;
-  }
-  
-  .snowflake:nth-child(3) {
-    width: 7px;
-    height: 7px;
-    animation-duration: 9s;
-    left: 30%;
-    animation-delay: 2s;
-  }
-  
-  .snowflake:nth-child(4) {
-    width: 6px;
-    height: 6px;
-    animation-duration: 12s;
-    left: 40%;
-    animation-delay: 3s;
-  }
-  
-  .snowflake:nth-child(5) {
-    width: 4px;
-    height: 4px;
-    animation-duration: 7s;
-    left: 50%;
-    animation-delay: 1.5s;
-  }
-  
-  .snowflake:nth-child(6) {
-    width: 10px;
-    height: 10px;
-    animation-duration: 14s;
-    left: 60%;
-    animation-delay: 2.5s;
-  }
-  
-  .snowflake:nth-child(7) {
-    width: 9px;
-    height: 9px;
-    animation-duration: 11s;
-    left: 70%;
-    animation-delay: 4s;
-  }
-  
-  .snowflake:nth-child(8) {
-    width: 6px;
-    height: 6px;
-    animation-duration: 13s;
-    left: 80%;
-    animation-delay: 3.5s;
-  }
-  
-  .snowflake:nth-child(9) {
-    width: 8px;
-    height: 8px;
-    animation-duration: 10s;
-    left: 90%;
-    animation-delay: 2s;
-  }
-  
-  .snowflake:nth-child(10) {
-    width: 5px;
-    height: 5px;
-    animation-duration: 9s;
-    left: 25%;
-    animation-delay: 0.5s;
-  }
-  
-  /* Добавяне на още снежинки по същия начин */
   

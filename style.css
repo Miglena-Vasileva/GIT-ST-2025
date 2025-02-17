@@ -1,39 +1,38 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(to bottom, #4e79a7, #1f496e); /* красив фон */
+  overflow: hidden;
+  position: relative;
+}
+
+#snowfall {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.snowflake {
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-10px);
   }
-  
-  body {
-    height: 100vh;
-    background: linear-gradient(to bottom, #4e79a7, #1f496e); /* красив фон */
-    overflow: hidden;
-    position: relative;
+  100% {
+    transform: translateY(100vh); /* снежинките ще падат до дъното на екрана */
   }
-  
-  #snowfall {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-  }
-  
-  .snowflake {
-    position: absolute;
-    background-color: white;
-    border-radius: 50%;
-    opacity: 0.8;
-    animation: fall linear infinite;
-  }
-  
-  @keyframes fall {
-    0% {
-      transform: translateY(-10px);
-    }
-    100% {
-      transform: translateY(100vh); /* снежинките ще падат до дъното на екрана */
-    }
-  }
-  
+}

@@ -8,6 +8,7 @@ body {
     background-color: #2f2f2f;
     overflow: hidden;
     height: 100vh;
+    position: relative;
 }
 
 .snowflakes {
@@ -24,9 +25,11 @@ body {
     position: absolute;
     top: -10px;
     color: white;
-    font-size: 2rem;
+    font-size: 1.5rem;
     user-select: none;
-    animation: snow 10s linear infinite;
+    animation: snow 8s linear infinite, rotate 10s linear infinite;
+    opacity: 0.8;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
 }
 
 @keyframes snow {
@@ -35,27 +38,56 @@ body {
         opacity: 0.8;
     }
     100% {
-        transform: translateX(100px) translateY(calc(100vh + 10px));
+        transform: translateX(calc(100vw * 0.5)) translateY(calc(100vh + 10px));
         opacity: 0;
     }
 }
 
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 .snowflake:nth-child(odd) {
-    animation-duration: 12s;
-    animation-delay: -2s;
+    animation-duration: 10s;
+    animation-delay: -3s;
 }
 
 .snowflake:nth-child(even) {
-    animation-duration: 8s;
-    animation-delay: -4s;
+    animation-duration: 12s;
+    animation-delay: -5s;
 }
 
 .snowflake:nth-child(3) {
-    animation-duration: 10s;
-    animation-delay: -1s;
+    animation-duration: 8s;
+    animation-delay: -2s;
 }
 
 .snowflake:nth-child(4) {
     animation-duration: 9s;
-    animation-delay: -3s;
+    animation-delay: -4s;
+}
+
+.snowflake:nth-child(5) {
+    animation-duration: 14s;
+    animation-delay: -6s;
+}
+
+.snowflake:nth-child(6) {
+    animation-duration: 11s;
+    animation-delay: -7s;
+}
+
+.snowflake:nth-child(7) {
+    animation-duration: 15s;
+    animation-delay: -8s;
+}
+
+.snowflake:nth-child(8) {
+    animation-duration: 13s;
+    animation-delay: -9s;
 }

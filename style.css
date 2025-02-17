@@ -5,7 +5,9 @@
 }
 
 body {
-    background-color: #2f2f2f;
+    background-image: url('https://www.w3schools.com/w3images/snow.jpg');
+    background-size: cover;
+    background-position: center;
     overflow: hidden;
     height: 100vh;
     position: relative;
@@ -24,12 +26,12 @@ body {
 .snowflake {
     position: absolute;
     top: -10px;
-    color: white;
+    color: #fff;
     font-size: 1.5rem;
     user-select: none;
     animation: snow 8s linear infinite, rotate 10s linear infinite;
-    opacity: 0.8;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    opacity: 0.9;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
 }
 
 @keyframes snow {
@@ -91,3 +93,20 @@ body {
     animation-duration: 13s;
     animation-delay: -9s;
 }
+
+.snowflake:nth-child(9) {
+    animation-duration: 16s;
+    animation-delay: -10s;
+}
+
+.snowflake:nth-child(10) {
+    animation-duration: 18s;
+    animation-delay: -11s;
+}
+
+/* Стил за различни размери на снежинките */
+.snowflake {
+    font-size: calc(1rem + (3 * (100vw / 2000)));
+}
+
+/* Можете да добавите допълнителни ефекти като флуидни анимации, за да разнообразите още повече снежинките */
